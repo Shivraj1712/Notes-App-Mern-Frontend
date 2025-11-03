@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import NotesPage from "./pages/NotesPage";
 import Footer from './components/Footer'
 import ResetPasswordPage from "./pages/ResetPasswordPage";
+import NotFoundPage from "./pages/NotFoundPage";
 export default function App() {
   return (
     <AuthProvider>
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/notes" element={<NotesPage />} />
           <Route path="/reset-password/:token" element={<ResetPasswordPage/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </Router>
       <Footer/>
